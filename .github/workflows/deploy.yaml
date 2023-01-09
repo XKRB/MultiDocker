@@ -14,7 +14,7 @@ env:
   ENVIRONMENT_NAME: 'MultiDocker-env'
   BUCKET_NAME: 'elasticbeanstalk-us-east-1-847555796967'
   IMAGE_TAG: 'xkrb/multidocker'
-  DOCKERFILE_DEV_PATH: 'Dockerfile.dev'
+  #DOCKERFILE_DEV_PATH: 'Dockerfile.dev'
 
 jobs:
   build:
