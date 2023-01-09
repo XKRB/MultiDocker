@@ -13,7 +13,7 @@ env:
   APPLICATION_NAME: 'MultiDocker'
   ENVIRONMENT_NAME: 'MultiDocker-env'
   BUCKET_NAME: 'elasticbeanstalk-us-east-1-847555796967'
-  IMAGE_TAG: 'xkrb/MultiDocker'
+  IMAGE_TAG: 'xkrb/multidocker'
   DOCKERFILE_DEV_PATH: 'Dockerfile.dev'
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker login -u "${{ env.DOCKER_USERNAME }}" -p "${{ env.DOCKER_PASSWORD }}"
-      - run: docker build -t xkrb/MultiDocker -f ./client/Dockerfile.dev ./client
+      - run: docker build -t "${{ env.IMAGE_TAG }}" -f ./client/Dockerfile.dev ./client
 #      - run: docker run -e CI=true "${{ env.IMAGE_TAG }}" npm test
  
 #      - run: docker build -t xkrb/multi-client-10-14 ./client
