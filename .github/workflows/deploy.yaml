@@ -30,7 +30,7 @@ jobs:
 #      - run: docker build -t xkrb/multi-server-10-14 ./server
 #      - run: docker build -t xkrb/multi-worker-10-14 ./worker
  
-#      - run: docker push xkrb/multi-client-10-14
+      - run: docker push xkrb/multi-client
 #      - run: docker push xkrb/multi-nginx-10-14
 #      - run: docker push xkrb/multi-server-10-14
 #      - run: docker push xkrb/multi-worker-10-14
