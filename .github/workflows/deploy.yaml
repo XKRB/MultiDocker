@@ -26,14 +26,14 @@ jobs:
       - run: docker run -e CI=true "${{ env.IMAGE_TAG }}" npm run test
  
       - run: docker build -t xkrb/client ./client
-#      - run: docker build -t xkrb/multi-nginx-10-14 ./nginx
-#      - run: docker build -t xkrb/multi-server-10-14 ./server
-#      - run: docker build -t xkrb/multi-worker-10-14 ./worker
- 
-#      - run: docker push xkrb/multi-client
-#      - run: docker push xkrb/multi-nginx-10-14
-#      - run: docker push xkrb/multi-server-10-14
-#      - run: docker push xkrb/multi-worker-10-14
+      - run: docker build -t xkrb/nginx ./nginx
+      - run: docker build -t xkrb/server ./server
+      - run: docker build -t xkrb/worker ./worker
+
+      - run: docker push xkrb/client
+      - run: docker push xkrb/nginx
+      - run: docker push xkrb/server
+      - run: docker push xkrb/worker
  
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
