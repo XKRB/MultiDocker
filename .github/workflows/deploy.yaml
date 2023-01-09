@@ -25,7 +25,7 @@ jobs:
       - run: docker build -t "${{ env.IMAGE_TAG }}" -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true "${{ env.IMAGE_TAG }}" npm test
  
-#      - run: docker build -t xkrb/multi-client ./client
+      - run: docker build -t cygnetops/multi-client-10-14 ./client
 #      - run: docker build -t xkrb/multi-nginx-10-14 ./nginx
 #      - run: docker build -t xkrb/multi-server-10-14 ./server
 #      - run: docker build -t xkrb/multi-worker-10-14 ./worker
