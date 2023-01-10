@@ -10,8 +10,8 @@ env:
   AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
   AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
   AWS_REGION: 'us-east-1'
-  APPLICATION_NAME: 'MultiDocker'
-  ENVIRONMENT_NAME: 'MultiDocker-env'
+  APPLICATION_NAME: 'multi-docker'
+  ENVIRONMENT_NAME: 'Multidocker-env'
   BUCKET_NAME: 'elasticbeanstalk-us-east-1-847555796967'
   IMAGE_TAG: 'xkrb/multidocker'
   #DOCKERFILE_DEV_PATH: 'Dockerfile.dev'
